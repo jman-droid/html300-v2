@@ -35,8 +35,8 @@
 
           <ul class="dropdown-menu">
 
-            <li><router-link to="/grid" class="dropdown-item">Grid Boostrap</router-link></li>
-            <li><router-link to="/accordian" class="dropdown-item">Must Watch</router-link></li>
+              <li><router-link to="/grid" class="dropdown-item">Grid Boostrap</router-link></li>
+              <li><router-link to="/accordian" class="dropdown-item">Must Watch</router-link></li>
           
           </ul>
         </li>
