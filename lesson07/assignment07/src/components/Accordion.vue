@@ -1,19 +1,26 @@
 <template>
+<!-- Accordion container begins here -->
 <div class="accordion" id="accordionPanelsStayOpenExample">
+    <!-- Accordion item that contains v-for looper to iterate through each object. id property is used to concatenate between the objects and their properties. -->
+    <div class="accordion-item"  v-for="film in films" :key="film.id">
 
-    <div class="accordion-item"  v-for="film in films" v-bind:key="film.id">
-
-        <h2 class="accordion-header"> {{ film.header }}
-
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        <h2 class="accordion-header" :id='"accordion-header" +film.id'>
+        <!-- button that toggles the hide/show features of bootstrap accordion feature. -->
+            <button 
+            class="accordion-button" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            :data-bs-target='"#panelsStayOpen-collapseOne" + film.id' 
+            aria-expanded="true" 
+            aria-controls="panelsStayOpen-collapseOne">
+            {{ film.header }}
             </button>
         </h2>
-
-        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-            <div class="accordion-body">
-                <h3>{{ film.name}}</h3>
-                <p> {{film.info}}</p>
-            </div>
+        
+        <div 
+        :id='"panelsStayOpen-collapseOne" + film.id'
+        class="accordion-collapse collapse show">
+        <div class="accordion-body"> <h3>{{ film.name}}</h3> <p> {{film.info}} </p></div>
         </div>
     </div>
 </div>

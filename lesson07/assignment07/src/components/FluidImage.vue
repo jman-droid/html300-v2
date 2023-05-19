@@ -1,5 +1,6 @@
 <template>
     <main>
+        <!-- v-for directive below allows you to iterate over a collection of data and generate dynamic content based on each item in the collection.  -->
         <div class="fluid-image" v-for="(image, i) in images" :key="i">
             <h2> {{ image.name }} </h2>
             <img
@@ -7,6 +8,7 @@
                 :alt="image.name"
                 class="img-fluid img-thumbnail"
             />
+
         </div>
     </main>
     </template>
@@ -18,7 +20,7 @@
         data() {
             return {
                 images: [
-                        
+                    // below is each object that is spit out when v-for loops. 
                     {
                         name:"Secrets & Lies (1996)",
                         url:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcriterion-production.s3.amazonaws.com%2Fcarousel-files%2F7a6bf951b45a8748cd9ed37e3cd728f8.jpeg&f=1&nofb=1&ipt=d86398199591e62244dc6a6253f4c8f45f7bec62e31a504d0888acf100669c9c&ipo=images"
@@ -35,7 +37,7 @@
                         name:"Possession (1981)",
                         url:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd2j1wkp1bavyfs.cloudfront.net%2Fwp-content%2Fuploads%2F2018%2F07%2F01022343%2F3861231.jpg%3Fq%3D50&f=1&nofb=1&ipt=b7502bcd7be4dfab0d6f1a42af54130edbb580f3337805547848d36e4d2427d8&ipo=images"
                     }
-                ]
+                ],
                 
             }
         }

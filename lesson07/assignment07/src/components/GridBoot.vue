@@ -1,6 +1,8 @@
 <template>
   <main class="main"> 
+    <!-- each h2,h3,img and p tag have all their content individually populated by vue by looking in the item object for either the title, name, imgLink, or info property -->
     <div class="container text-center"> 
+      <!-- one of two bootstrap rows begins here -->
       <div class="row">
         <!-- Stack the columns on mobile by making one full-width and the other half-width -->
           <div class="col-md-8">
@@ -12,6 +14,7 @@
               class="img-thumbnail"
             />
             <p> {{ item.info }}</p>
+
           </div>
           <div class="col-6 col-md-4">
             <h2>{{ item.title }}</h2>
@@ -24,7 +27,7 @@
             <p> {{ item.info }}</p>
           </div>
       </div>
-      <!-- For all columns below they start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+      <!-- For all columns below they start at 50% wide on mobile and bump up to 33.3% wide on desktop. second row begins below-->
         <div class="row">
           <div class="col-6 col-md-4">
             <h2>{{ item.title }}</h2>
