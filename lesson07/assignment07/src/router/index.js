@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import FluidView from '../views/FluidView.vue'
-import GridView from '../views/GridView.vue'
-import AccordianView from '../views/AccordianView.vue'
+import HomeContent from '../components/Home.vue'
+import FluidImage from '../components/FluidImage.vue'
+import GridBoot from '../components/GridBoot.vue'
+import AccordionContent from '../components/Accordion.vue'
 
 
 
@@ -14,22 +14,22 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeContent
   },
   {
     path: '/fluid',
     name: 'fluid',
-    component: FluidView
+    component: FluidImage
   },
   {
     path: '/grid',
     name: 'grid',
-    component: GridView
+    component: GridBoot
   },
   {
-    path: '/accordian',
-    name: 'accordian',
-    component: AccordianView
+    path: '/accordion',
+    name: 'accordion',
+    component: AccordionContent
   },
   // {
   //   path: '/about',
