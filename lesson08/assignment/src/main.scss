@@ -1,0 +1,21 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+.film {
+  // start of 75% opacity
+  img {
+    opacity: .75;
+    transition: all 0.2s;
+    // on clicking image add border and 100% opacity
+    &.active {
+      border:3px solid #dc3545;
+      opacity:1;
+    }
+  }
+  // on hover image 100% opacity
+  &:hover img {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+}
